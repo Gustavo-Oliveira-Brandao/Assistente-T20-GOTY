@@ -1,0 +1,46 @@
+@use '../../assets/variables';
+
+.resourceBar {
+  cursor: pointer;
+  width: 230px;
+  height: 25px;
+  flex-shrink: 0;
+  position: relative;
+  background-color: variables.$primary-color;
+
+  .bar {
+    width: 100%;
+    max-width: 240px;
+    height: 100%;
+    transition: width 0.5s;
+  }
+
+  .text {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 100%;
+    text-align: center;
+
+    p {
+      color: #fff;
+      font-size: 14px;
+    }
+  }
+
+  .greenBar {
+    background-color: variables.$green;
+  }
+
+  .blueBar {
+    background-color: variables.$blue;
+  }
+}
+
+.resourceBar:hover {
+  .text {
+    p {
+      color: variables.$highlight-color;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@use 'assets/base.scss';
+@use './assets/variables';
+
+body {
+  background: variables.$background-color;
+}

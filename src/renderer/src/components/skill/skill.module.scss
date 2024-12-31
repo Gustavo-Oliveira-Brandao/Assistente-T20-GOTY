@@ -1,0 +1,19 @@
+@use '../../assets/variables';
+
+.skill {
+  width: 200px;
+  height: 40px;
+  margin-bottom: 11px;
+  flex-shrink: 0;
+  font-size: 13.3px;
+  border-radius: 5px;
+  background: variables.$secondary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+
+  button:hover {
+    color: variables.$highlight-color;
+  }
+}
