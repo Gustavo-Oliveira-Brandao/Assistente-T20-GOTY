@@ -1,10 +1,13 @@
+import { Modifier } from './IModifier'
+
 export interface Skill {
-  id?: number
+  id: number
   name: string
   totalValue: number
-  training: string
+  isTrained: boolean
   attribute: string
-  trainingRestriction: boolean
-  armorPenalty: boolean
+  isTrainingRestricted: boolean
+  hasArmorPenalty: boolean
   isSavingThrow: boolean
+  modifiers: Modifier[]
 }
