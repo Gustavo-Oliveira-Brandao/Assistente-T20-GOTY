@@ -7,4 +7,5 @@ export interface ItemInventario {
   preco: number
   quantidade: number
   modificadores: string[]
+  carregadoComo: string
 }

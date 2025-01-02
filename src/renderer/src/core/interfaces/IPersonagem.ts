@@ -1,3 +1,5 @@
+import { Arma } from './IArma'
+import { Armadura } from './IArmadura'
 import { Atributo } from './IAtributo'
 import { Condicao } from './ICondicao'
 import { ItemInventario } from './IItem'
@@ -24,6 +26,8 @@ export interface Personagem {
   atributos: Atributo[]
   pericias: Pericia[]
   itens: ItemInventario[]
+  armas: Arma[]
+  armaduras: Armadura[]
   poderes: Poder[]
   magias: Magia[]
   condicoes: Condicao[]
