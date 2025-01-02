@@ -7,4 +7,5 @@ export interface Poder {
   descricao: string
   nivel: number
   preRequisitos?: string[]
+  modificadores: string[]
 }

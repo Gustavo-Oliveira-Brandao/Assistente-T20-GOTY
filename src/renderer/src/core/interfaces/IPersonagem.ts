@@ -1,4 +1,3 @@
-import { Acao } from './IAcao'
 import { Atributo } from './IAtributo'
 import { Condicao } from './ICondicao'
 import { ItemInventario } from './IItem'
@@ -14,11 +13,9 @@ export interface Personagem {
   origem: string
   divindade: string
   nivel: number
-  vidaMaxima: number
-  vidaAtual: number
+  vida: number
   vidaTemporaria: number
-  manaMaxima: number
-  manaAtual: number
+  mana: number
   manaTemporaria: number
   deslocamento: number
   deslocamentoVoo: number
@@ -27,7 +24,6 @@ export interface Personagem {
   atributos: Atributo[]
   pericias: Pericia[]
   itens: ItemInventario[]
-  acoes: Acao[]
   poderes: Poder[]
   magias: Magia[]
   condicoes: Condicao[]

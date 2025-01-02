@@ -1,7 +1,7 @@
 export interface Dano {
   id: number
   aplicaValorAtributo: boolean
-  categoria: string
-  formula: string
+  quantidadeDados: number
+  dado: number
   tipo: string
 }

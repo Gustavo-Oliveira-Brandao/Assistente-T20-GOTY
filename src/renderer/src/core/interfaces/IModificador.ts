@@ -1,8 +1,8 @@
 export interface Modificador {
   id: number
-  tipoAlvo: string
-  seletor: string
-  slug: string
+  nome: string
+  categoria: string
+  fonte: string
+  alvo: string
   valor: number
-  tipo: string
 }
