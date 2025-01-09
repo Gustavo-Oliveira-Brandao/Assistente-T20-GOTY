@@ -4,5 +4,7 @@ export interface Pericia{
     ehTreinado: boolean
     ehTesteResistencia: boolean
     atributo: string
+    requerTreinamento: boolean
+    sofrePenalidadeArmadura: boolean
     descricao?: string
 }

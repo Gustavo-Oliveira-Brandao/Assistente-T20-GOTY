@@ -1,6 +1,6 @@
 @use "../../../core/variables.scss";
 
-.rolagem {
+.roll-btn {
     display: grid;
     align-items: center;
     justify-content: center;
@@ -22,7 +22,7 @@
     }
 }
 
-.rolagem:hover {
+.roll-btn:hover {
     color: variables.$highlight-color;
     transform: scale(1.3);
 
