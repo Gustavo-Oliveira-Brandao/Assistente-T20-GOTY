@@ -1,0 +1,61 @@
+<aside class="sidebar">
+    <div class="fotoPersonagem">
+        <img src="/character.png" alt="" />
+        <span class="opacidade"></span>
+        <div class="info">
+            <app-botao-modular icone="raca.svg" css="comIcone" [texto]="personagem.raca" />
+            <app-botao-modular icone="classe.svg" css="comIcone" [texto]="personagem.classe"  />
+            <app-botao-modular icone="origem.svg" css="comIcone" [texto]="personagem.origem"  />
+            <app-botao-modular icone="divindade.svg" css="comIcone" [texto]="personagem.divindade"  />
+        </div>
+    </div>
+    <div class="nome">
+        <p>Nome eba</p>
+    </div>
+    <div class="barrasRecurso">
+        <app-barra-recurso [atual]="100" [maximo]="100" css="verde" />
+        <app-barra-recurso [atual]="100" [maximo]="100" css="azul"  />
+    </div>
+    <div class="infoSecundaria">
+        <div class="titulo">
+            <h2>Defesa</h2>
+        </div>
+        <div class="recurso">
+            <img src="/ca.svg" alt="" />
+            <app-botao-modular texto="10" css="recursoSecundario"/>
+        </div>
+    </div>
+    <div class="infoSecundaria">
+        <div class="titulo">
+            <h2>Deslocamento</h2>
+        </div>
+        <div class="recurso">
+            <img src="/deslocamento.svg" alt="" />
+            <app-botao-modular texto="10" css="recursoSecundario" />
+        </div>
+    </div>
+    <div class="infoSecundaria">
+        <div class="titulo">
+            <h2>Testes de resistência</h2>
+        </div>
+        <div class="pericias">
+            @for(pericia of personagem.pericias; track pericia.id){
+                @if(pericia.ehTesteResistencia){
+                <app-pericia [pericia]="pericia" />
+                }
+            }
+        </div>
+    </div>
+    <div class="infoSecundaria">
+        <div class="titulo">
+            <h2>Iniciativa</h2>
+        </div>
+        <div class="pericias">
+            @for(pericia of personagem.pericias; track pericia.id){
+                @if(pericia.nome == "iniciativa"){
+                    <app-pericia [pericia]="pericia"/>
+                }
+            }
+        </div>
+    </div>
+</aside>
