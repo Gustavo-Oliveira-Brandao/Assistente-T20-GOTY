@@ -1,0 +1,45 @@
+@use "@assets/variables.scss";
+
+.comIcone {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    width: 200px;
+
+    .icone {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    p {
+        margin-left: 5px;
+        font-size: 13.3px;
+        color: variables.$special-text-color;
+    }
+
+    &:hover {
+        background-color: #2e2e2e77;
+        border-radius: 30px;
+
+        p {
+            color: variables.$highlight-color;
+        }
+    }
+}
+
+.recursoSecundario {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: variables.$secondary-color;
+
+    p {
+        font-size: 16px;
+    }
+
+    &:hover {
+        p {
+            color: variables.$highlight-color;
+        }
+    }
+}
