@@ -1,10 +1,10 @@
 import { Dano } from "./Dano"
-import { Modificador } from "./Modificador"
 
 export interface Magia{
     id: number
     nome: string
     descricao: string
+    testeResistencia?: string
     area: string
     duracao: string
     nivelCirculo: number
@@ -14,5 +14,4 @@ export interface Magia{
     alcance: string
     alvo: string
     danos?: Dano[]
-    modificadores?: Modificador[]
 }

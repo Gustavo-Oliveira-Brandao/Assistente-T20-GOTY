@@ -1,3 +1,5 @@
+import { Bonus } from "./Bonus"
+
 export interface Dano{
     id: number
     aplicaValorAtributo: boolean
@@ -5,5 +7,5 @@ export interface Dano{
     dado: number
     formula: string
     tipo: string
-    bonus: number
+    bonus: Bonus[]
 }

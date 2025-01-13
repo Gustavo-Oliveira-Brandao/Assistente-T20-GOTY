@@ -61,7 +61,7 @@ function SidebarPersonagem({ personagem }: { personagem: Personagem }) {
                     {
                         personagem.pericias.map((pericia) => (
                             pericia.ehTesteResistencia ?
-                                (<CardPericia pericia={pericia} />)
+                                (<CardPericia key={pericia.id} pericia={pericia} />)
                                 :
                                 null
                         ))
@@ -76,7 +76,7 @@ function SidebarPersonagem({ personagem }: { personagem: Personagem }) {
                     {
                         personagem.pericias.map((pericia) => (
                             pericia.nome == "iniciativa" ?
-                                (<CardPericia pericia={pericia} />)
+                                (<CardPericia key={pericia.id} pericia={pericia} />)
                                 :
                                 null
                         ))

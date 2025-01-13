@@ -1,5 +1,5 @@
 export interface Bonus{
+    id: number
     nome: string
-    categoria: string
     valor: number
 }

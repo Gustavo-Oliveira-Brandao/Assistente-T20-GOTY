@@ -1,4 +1,3 @@
-import { Modificador } from "./Modificador"
 
 export interface Poder{
     id: number
@@ -6,5 +5,4 @@ export interface Poder{
     descricao: string
     categoria: string
     subCategoria: string
-    modificadores: Modificador[]
 }
