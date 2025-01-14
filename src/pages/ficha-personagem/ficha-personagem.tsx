@@ -3,6 +3,7 @@ import SidebarPersonagem from "../../templates/ficha-sidebar/sidebar-personagem"
 import { Personagem } from "../../@types/Personagem"
 import axios from "axios"
 import { inicializarPersonagem } from "../../utils/inicializarPersonagem"
+import styles from "./ficha-personagem.module.scss"
 
 function FichaPersonagem() {
 
@@ -22,7 +23,7 @@ function FichaPersonagem() {
 
 
     return (
-        <main>
+        <main className={styles.ficha}>
             {
                 personagem &&
                 <SidebarPersonagem personagem={personagem} />
