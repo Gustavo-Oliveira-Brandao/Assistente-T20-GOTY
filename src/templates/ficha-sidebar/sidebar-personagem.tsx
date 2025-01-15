@@ -55,6 +55,21 @@ function SidebarPersonagem({ personagem }: { personagem: Personagem }) {
             </div>
             <div className={styles.infoSecundaria}>
                 <div className={styles.titulo}>
+                    <h2>Pericias de combate</h2>
+                </div>
+                <div className={styles.pericias}>
+                    {
+                        personagem.pericias.map((pericia) => (
+                            (pericia.nome === "luta" || pericia.nome === "pontaria") && (
+                                <CardPericia key={pericia.id} pericia={pericia} css="sidebar" />
+                            )
+                        ))
+                    }
+                </div>
+            </div>
+
+            <div className={styles.infoSecundaria}>
+                <div className={styles.titulo}>
                     <h2>Testes de resistência</h2>
                 </div>
                 <div className={styles.pericias}>

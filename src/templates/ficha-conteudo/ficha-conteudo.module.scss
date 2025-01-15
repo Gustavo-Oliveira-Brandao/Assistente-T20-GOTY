@@ -1,7 +1,7 @@
 @use "@assets/variables.scss";
 
 .conteudo{
-    width: 770px;
+    width: 700px;
     height: 100%;
     overflow: hidden auto;
     display: flex;
@@ -30,7 +30,7 @@
         .pericias{
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+            gap: 12px;
         }
     }
     

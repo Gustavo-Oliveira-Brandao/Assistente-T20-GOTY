@@ -28,7 +28,14 @@ function FichaConteudo({ personagem }: { personagem: Personagem }) {
                 <div className={styles.pericias}>
                     {
                         personagem.pericias.map((pericia) => (
-                            <CardPericia key={pericia.id} pericia={pericia} css="pericia" />
+                            !pericia.ehTesteResistencia && 
+                            pericia.nome !== "iniciativa" && 
+                            pericia.nome !== "conhecimento" && 
+                            pericia.nome !== "luta" && 
+                            pericia.nome !== "pontaria" &&
+                            pericia.nome !== "oficio" && (
+                                <CardPericia key={pericia.id} pericia={pericia} css="pericia" />
+                            )
                         ))
                     }
                 </div>

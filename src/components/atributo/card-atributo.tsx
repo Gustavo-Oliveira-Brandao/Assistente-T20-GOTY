@@ -1,6 +1,7 @@
-import { Atributo } from "@/@types/Atributo"
+
 import styles from "./card-atributo.module.scss"
 import BotaoRolagem from "../botao-rolagem/botao-rolagem"
+import { Atributo } from "../../@types/Atributo"
 
 function CardAtributo({ atributo }: { atributo: Atributo }) {
 
