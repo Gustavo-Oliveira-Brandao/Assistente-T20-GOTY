@@ -4,6 +4,7 @@ import { Personagem } from "../../@types/Personagem"
 import axios from "axios"
 import { inicializarPersonagem } from "../../utils/inicializarPersonagem"
 import styles from "./ficha-personagem.module.scss"
+import FichaConteudo from "../../templates/ficha-conteudo/ficha-conteudo"
 
 function FichaPersonagem() {
 
@@ -25,8 +26,12 @@ function FichaPersonagem() {
     return (
         <main className={styles.ficha}>
             {
-                personagem &&
-                <SidebarPersonagem personagem={personagem} />
+                personagem && (
+                    <>
+                        <SidebarPersonagem personagem={personagem} />
+                        <FichaConteudo personagem={personagem} />
+                    </>
+                )
             }
         </main>
     )
