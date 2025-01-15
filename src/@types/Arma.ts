@@ -1,3 +1,4 @@
+import { Bonus } from "./Bonus";
 import { Dano } from "./Dano";
 import { ItemInventario } from "./ItemInventario";
 import { PropriedadeItem } from "./PropriedadeItem";
@@ -7,7 +8,7 @@ export interface Arma extends ItemInventario{
     alcance: string
     margemCritico: number
     multiplicadorCritico: number
-    bonus: number
+    bonus: Bonus[]
     danos: Dano[]
     propriedades: PropriedadeItem[]
 }

@@ -3,7 +3,7 @@ import { Bonus } from "./Bonus"
 export interface Pericia{
     id: number
     nome: string
-    valor: number
+    valorAtual: number
     bonus: Bonus[]
     ehTreinado: boolean
     ehTesteResistencia: boolean

@@ -3,6 +3,8 @@ import SidebarPersonagem from "../../templates/ficha-sidebar/sidebar-personagem"
 import { Personagem } from "../../@types/Personagem"
 import axios from "axios"
 import { inicializarPersonagem } from "../../utils/inicializarPersonagem"
+import styles from "./ficha-personagem.module.scss"
+import FichaConteudo from "../../templates/ficha-conteudo/ficha-conteudo"
 
 function FichaPersonagem() {
 
@@ -22,10 +24,14 @@ function FichaPersonagem() {
 
 
     return (
-        <main>
+        <main className={styles.ficha}>
             {
-                personagem &&
-                <SidebarPersonagem personagem={personagem} />
+                personagem && (
+                    <>
+                        <SidebarPersonagem personagem={personagem} />
+                        <FichaConteudo personagem={personagem} />
+                    </>
+                )
             }
         </main>
     )

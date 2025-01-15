@@ -1,19 +1,58 @@
 @use "@assets/variables.scss";
 
-.pericia {
-    width: 200px;
-    height: 40px;
-    margin-bottom: 11px;
-    flex-shrink: 0;
-    font-size: 13.3px;
-    border-radius: 5px;
+.padrao {
     background: variables.$secondary-color;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2px;
+    border-radius: 5px;
 
     button:hover {
-        color: variables.$highlight-color;
+        .nome {
+            color: variables.$highlight-color;
+        }
+    }
+}
+
+.sidebar {
+    width: 207px;
+    height: 40px;
+    margin-bottom: 11px;
+    flex-shrink: 0;
+    font-size: 13.3px;
+}
+
+.pericia {
+    width: 100%;
+    height: 42px;
+    flex-shrink: 0;
+
+    .parteEsquerda {
+
+        p {
+            text-align: left;
+        }
+
+        .nome{
+            font-size: 14px;
+        }
+
+        .atributo {
+            color: variables.$special-text-color;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+    }
+
+    .parteDireita {
+        display: flex;
+        align-items: center;
+
+        .treinamento {
+            color: variables.$special-text-color;
+            font-size: 12px;
+            font-weight: 400;
+        }
     }
 }
