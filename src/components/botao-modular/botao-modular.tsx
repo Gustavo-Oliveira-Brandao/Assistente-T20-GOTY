@@ -7,16 +7,19 @@ function BotaoModular({
 }: {
     icone?: string,
     css: string,
-    texto: string | number
-}){
+    texto?: string | number
+}) {
 
-    return(
+    return (
         <button className={styles[css]}>
             {
                 icone &&
                 <img className={styles.icone} src={icone} alt={String(texto)} />
             }
-            <p>{texto}</p>
+            {
+                texto &&
+                <p>{texto}</p>
+            }
         </button>
     )
 }

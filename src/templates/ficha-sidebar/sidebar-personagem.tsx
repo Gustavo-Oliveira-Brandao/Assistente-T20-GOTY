@@ -60,7 +60,7 @@ function SidebarPersonagem({ personagem }: { personagem: Personagem }) {
                 <div className={styles.pericias}>
                     {
                         personagem.pericias.map((pericia) => (
-                            (pericia.nome === "luta" || pericia.nome === "pontaria") && (
+                            pericia.categoria === "combate" && (
                                 <CardPericia key={pericia.id} pericia={pericia} css="sidebar" />
                             )
                         ))
@@ -75,7 +75,7 @@ function SidebarPersonagem({ personagem }: { personagem: Personagem }) {
                 <div className={styles.pericias}>
                     {
                         personagem.pericias.map((pericia) => (
-                            pericia.ehTesteResistencia ?
+                            pericia.categoria === "testeResistencia" ?
                                 (<CardPericia key={pericia.id} pericia={pericia} css="sidebar" />)
                                 :
                                 null

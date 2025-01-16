@@ -21,9 +21,6 @@ function CardPericia({
             <div className={styles.parteEsquerda}>
                 <button>
                     <p className={styles.nome}>{pericia.nome}</p>
-                    {css !== "sidebar" && (
-                        <p className={styles.atributo}>{pericia.atributo}</p>
-                    )}
                 </button>
             </div>
             <div className={styles.parteDireita}>
