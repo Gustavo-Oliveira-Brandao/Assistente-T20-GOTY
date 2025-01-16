@@ -3,11 +3,11 @@ import { Personagem } from "../../@types/Personagem"
 import CardAtributo from "../../components/atributo/card-atributo"
 import CardPericia from "../../components/pericia/card-pericia"
 
-function Atributos({personagem} : {personagem: Personagem}){
+function Atributos({ personagem }: { personagem: Personagem }) {
 
 
     return (
-        <div className={styles.conteudo}>
+        <>
             <div className={styles.secao}>
                 <div className={styles.titulo}>
                     <h2>Atributos</h2>
@@ -60,7 +60,7 @@ function Atributos({personagem} : {personagem: Personagem}){
                     }
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 
