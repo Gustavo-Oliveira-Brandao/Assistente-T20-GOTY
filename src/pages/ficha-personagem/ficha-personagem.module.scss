@@ -1,11 +1,16 @@
 @use "@assets/variables.scss";
 
-.ficha {
-    width: 930px;
+main {
+    display: flex;
+    width: 960px;
     margin-left: auto;
     margin-right: auto;
-    background-color: variables.$background-color;
-    display: flex;
-    overflow: hidden;
-    height: 100vh;
+
+    .ficha {
+        background-color: variables.$background-color;
+        display: flex;
+        overflow: hidden;
+        height: 100vh;
+        position: relative;
+    }
 }
