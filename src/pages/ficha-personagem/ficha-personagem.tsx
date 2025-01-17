@@ -5,9 +5,6 @@ import axios from "axios"
 import { inicializarPersonagem } from "../../utils/inicializarPersonagem"
 import styles from "./ficha-personagem.module.scss"
 import Atributos from "../../templates/atributos/atributos"
-import AtributosIcon from "@assets/icons/atributos.svg"
-import AcoesIcon from "@assets/icons/acoes.svg"
-import GrimorioIcon from "@assets/icons/grimorio.svg"
 import Acoes from "../../templates/acoes/acoes"
 import Grimorio from "../../templates/grimorio/grimorio"
 
@@ -17,7 +14,7 @@ function FichaPersonagem() {
     const [aba, setAba] = useState("atributos")
 
     useEffect(() => {
-        axios.get<Personagem>("src/data/PersonagemMock.json")
+        axios.get<Personagem>("/data/PersonagemMock.json")
             .then(response => {
                 const personagemInicializado = inicializarPersonagem(response.data)
                 setPersonagem(personagemInicializado)
@@ -26,8 +23,6 @@ function FichaPersonagem() {
                 console.error(error)
             })
     }, [])
-
-
 
     return (
         <main>
@@ -55,9 +50,9 @@ function FichaPersonagem() {
                             </div>
                         </div>
                         <nav className={styles.navButtons}>
-                            <button className={aba == "atributos" ? styles.active : undefined} onClick={() => setAba("atributos")}><img src={AtributosIcon} alt="atributos" /></button>
-                            <button className={aba == "acoes" ? styles.active : undefined} onClick={() => setAba("acoes")}><img src={AcoesIcon} alt="acoes" /></button>
-                            <button className={aba == "grimorio" ? styles.active : undefined} onClick={() => setAba("grimorio")}><img src={GrimorioIcon} alt="grimorio" /></button>
+                            <button className={aba == "atributos" ? styles.active : undefined} onClick={() => setAba("atributos")}><img src={"/icons/default/atributos.svg"} alt="atributos" /></button>
+                            <button className={aba == "acoes" ? styles.active : undefined} onClick={() => setAba("acoes")}><img src={"/icons/default/acoes.svg"} alt="acoes" /></button>
+                            <button className={aba == "grimorio" ? styles.active : undefined} onClick={() => setAba("grimorio")}><img src={"/icons/default/grimorio.svg"} alt="grimorio" /></button>
                         </nav>
                     </>
                 )

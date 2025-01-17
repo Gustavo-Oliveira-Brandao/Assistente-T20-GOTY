@@ -4,6 +4,7 @@ export interface ItemInventario{
     nome: string
     descricao: string
     categoria: string
+    icone?: string
     preco: number
     espacos: number
     quantidade: number
