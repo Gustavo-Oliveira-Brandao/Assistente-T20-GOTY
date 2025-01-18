@@ -17,7 +17,9 @@ export interface Personagem{
     divindade: string
     nivel: number
     experiencia: number
-    defesa: number
+    defesaAtual: number
+    penalidadeArmadura: number
+    armaduraEquipada: string
     recursos: Recurso[]
     deslocamentos: Deslocamento[]
     atributos: Atributo[]

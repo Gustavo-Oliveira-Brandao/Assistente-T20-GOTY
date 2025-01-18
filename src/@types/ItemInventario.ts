@@ -1,3 +1,4 @@
+import { Efeito } from "./Efeito"
 
 export interface ItemInventario{
     id: number
@@ -8,4 +9,5 @@ export interface ItemInventario{
     preco: number
     espacos: number
     quantidade: number
+    efeitos: Efeito[]
 }

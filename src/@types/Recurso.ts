@@ -6,5 +6,6 @@ export interface Recurso{
     valorAtual: number
     valorMaximo: number
     valorTemporario: number
+    descricao?: string
     bonus: Bonus[]
 }

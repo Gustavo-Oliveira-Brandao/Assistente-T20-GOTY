@@ -3,15 +3,17 @@ import { Dano } from "./Dano"
 export interface Magia{
     id: number
     nome: string
-    descricao: string
-    testeResistencia?: string
+    icone: string
     area: string
-    duracao: string
-    nivelCirculo: number
     execucao: string
-    tradicao: string
-    escola: string
+    testeResistencia: string
+    descricao: string
+    duracao: string
+    ehSustentada: boolean
+    nivelCirculo: number
     alcance: string
     alvo: string
+    tradição: string
+    escola: string
     danos?: Dano[]
 }
